@@ -34,6 +34,17 @@ document.querySelectorAll('[data-interest-link]').forEach((link) => {
   });
 });
 
+const floatingCta = document.querySelector('.floating-cta');
+
+window.addEventListener('scroll', () => {
+  if (!floatingCta) {
+    return;
+  }
+
+  const shouldCompress = window.scrollY > 280;
+  floatingCta.classList.toggle('is-compact', shouldCompress);
+});
+
 leadForm?.addEventListener('submit', (event) => {
   event.preventDefault();
 

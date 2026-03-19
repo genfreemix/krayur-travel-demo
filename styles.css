@@ -449,6 +449,136 @@ label {
   gap: 20px;
 }
 
+.experience-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.experience-visual,
+.experience-card,
+.season-card {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  backdrop-filter: blur(14px);
+  box-shadow: var(--shadow);
+}
+
+.experience-visual {
+  position: relative;
+  min-height: 480px;
+  border-radius: var(--radius-xl);
+  background:
+    radial-gradient(circle at center, rgba(255, 250, 240, 0.9), rgba(217, 181, 141, 0.18)),
+    linear-gradient(160deg, rgba(69, 111, 122, 0.1), rgba(36, 70, 61, 0.12));
+  overflow: hidden;
+}
+
+.experience-core,
+.experience-orbit {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.experience-core {
+  inset: 50%;
+  width: 170px;
+  height: 170px;
+  transform: translate(-50%, -50%);
+  padding: 28px;
+  background: linear-gradient(135deg, var(--forest), var(--sea));
+  color: #fff6ea;
+  box-shadow: 0 24px 50px rgba(36, 70, 61, 0.28);
+}
+
+.experience-core strong {
+  display: block;
+  font-family: "Oranienbaum", serif;
+  font-size: 1.6rem;
+}
+
+.experience-core p {
+  margin: 8px 0 0;
+  color: rgba(255, 246, 234, 0.82);
+  line-height: 1.45;
+}
+
+.experience-orbit {
+  width: 120px;
+  height: 120px;
+  padding: 16px;
+  background: rgba(255, 250, 240, 0.9);
+  border: 1px solid var(--line);
+  color: var(--accent-deep);
+  font-weight: 700;
+}
+
+.orbit-sea {
+  top: 12%;
+  right: 16%;
+}
+
+.orbit-road {
+  top: 28%;
+  left: 10%;
+}
+
+.orbit-history {
+  bottom: 16%;
+  left: 18%;
+}
+
+.orbit-expedition {
+  right: 14%;
+  bottom: 20%;
+}
+
+.experience-points,
+.season-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.experience-card,
+.season-card {
+  padding: 28px;
+  border-radius: var(--radius-lg);
+}
+
+.season-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.season-card {
+  background:
+    linear-gradient(180deg, rgba(255, 250, 240, 0.88), rgba(232, 221, 204, 0.74));
+}
+
+.season-card small {
+  display: inline-block;
+  margin-bottom: 14px;
+  color: var(--accent-deep);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 800;
+}
+
+.season-card h3,
+.experience-card h3 {
+  margin: 0 0 12px;
+  font-size: 1.24rem;
+}
+
+.season-card p,
+.experience-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
 .audience-grid,
 .flow-grid {
   display: grid;
@@ -652,16 +782,24 @@ label {
   color: #fff8f0;
   font-weight: 800;
   box-shadow: 0 18px 36px rgba(127, 60, 23, 0.34);
+  transition: transform 0.25s ease, opacity 0.25s ease, padding 0.25s ease;
+}
+
+.floating-cta.is-compact {
+  padding-inline: 16px;
+  transform: translateY(2px) scale(0.96);
 }
 
 @media (max-width: 1100px) {
   .hero-grid,
   .platform-layout,
+  .experience-layout,
   .lead-section,
   .cards-grid,
   .platform-tools,
   .audience-grid,
   .flow-grid,
+  .season-grid,
   .strategy-grid,
   .advantage-grid,
   .intro-grid,
@@ -691,11 +829,13 @@ label {
   .topbar-actions,
   .hero-grid,
   .platform-layout,
+  .experience-layout,
   .lead-section,
   .cards-grid,
   .platform-tools,
   .audience-grid,
   .flow-grid,
+  .season-grid,
   .strategy-grid,
   .advantage-grid,
   .intro-grid,
@@ -721,6 +861,8 @@ label {
   .intro-grid article,
   .offer-card,
   .advantage,
+  .experience-card,
+  .season-card,
   .audience-card,
   .flow-card,
   .conversion-banner,
@@ -736,6 +878,35 @@ label {
 
   .hero-copy h1 {
     font-size: clamp(2.7rem, 16vw, 4.4rem);
+  }
+
+  .experience-visual {
+    min-height: 420px;
+  }
+
+  .experience-orbit {
+    width: 104px;
+    height: 104px;
+  }
+
+  .orbit-sea {
+    top: 8%;
+    right: 8%;
+  }
+
+  .orbit-road {
+    top: 28%;
+    left: 4%;
+  }
+
+  .orbit-history {
+    bottom: 12%;
+    left: 8%;
+  }
+
+  .orbit-expedition {
+    right: 6%;
+    bottom: 18%;
   }
 
   .button,

@@ -200,6 +200,23 @@ textarea {
   margin-top: 28px;
 }
 
+.hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.hero-tags span {
+  display: inline-flex;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(255, 250, 240, 0.6);
+  border: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
 .button {
   display: inline-flex;
   justify-content: center;
@@ -365,6 +382,8 @@ textarea {
 .offer-card p,
 .advantage p,
 .platform-note p,
+.audience-card p,
+.flow-card p,
 .tool-card p,
 .strategy-card p,
 .lead-copy p,
@@ -386,6 +405,17 @@ label {
 .tool-card {
   padding: 28px;
   border-radius: var(--radius-lg);
+}
+
+.inline-cta {
+  display: inline-flex;
+  margin-top: 16px;
+  color: var(--accent-deep);
+  font-weight: 700;
+}
+
+.inline-cta:hover {
+  color: var(--accent);
 }
 
 .offer-card span {
@@ -417,6 +447,94 @@ label {
   display: grid;
   grid-template-columns: 0.95fr 1.05fr;
   gap: 20px;
+}
+
+.audience-grid,
+.flow-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.audience-card,
+.flow-card,
+.conversion-banner,
+.faq-list,
+.site-footer {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  backdrop-filter: blur(14px);
+  box-shadow: var(--shadow);
+}
+
+.audience-card,
+.flow-card {
+  padding: 28px;
+  border-radius: var(--radius-lg);
+}
+
+.flow-card strong {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 18px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--forest), var(--sea));
+  color: #fff;
+}
+
+.conversion-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 28px 32px;
+  border-radius: var(--radius-xl);
+  background:
+    linear-gradient(140deg, rgba(36, 70, 61, 0.9), rgba(69, 111, 122, 0.82)),
+    var(--surface);
+  color: #fff6ea;
+}
+
+.conversion-banner .eyebrow,
+.conversion-banner h2 {
+  color: #fff6ea;
+}
+
+.conversion-copy {
+  max-width: 760px;
+}
+
+.faq-list {
+  padding: 10px 22px;
+  border-radius: var(--radius-xl);
+}
+
+.faq-list details {
+  border-bottom: 1px solid var(--line);
+  padding: 18px 4px;
+}
+
+.faq-list details:last-child {
+  border-bottom: 0;
+}
+
+.faq-list summary {
+  cursor: pointer;
+  font-weight: 700;
+  list-style: none;
+}
+
+.faq-list summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-list p {
+  margin: 12px 0 0;
+  color: var(--muted);
+  line-height: 1.6;
 }
 
 .platform-note {
@@ -502,12 +620,48 @@ label {
   transform: translateY(0);
 }
 
+.site-footer {
+  width: var(--container);
+  margin: 0 auto 34px;
+  padding: 24px 28px;
+  border-radius: var(--radius-xl);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+}
+
+.site-footer p {
+  margin: 8px 0 0;
+  color: var(--muted);
+  max-width: 64ch;
+}
+
+.floating-cta {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 10;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  padding: 0 20px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-deep));
+  color: #fff8f0;
+  font-weight: 800;
+  box-shadow: 0 18px 36px rgba(127, 60, 23, 0.34);
+}
+
 @media (max-width: 1100px) {
   .hero-grid,
   .platform-layout,
   .lead-section,
   .cards-grid,
   .platform-tools,
+  .audience-grid,
+  .flow-grid,
   .strategy-grid,
   .advantage-grid,
   .intro-grid,
@@ -517,6 +671,11 @@ label {
 
   .metrics-grid {
     grid-template-columns: 1fr;
+  }
+
+  .conversion-banner {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 
@@ -535,6 +694,8 @@ label {
   .lead-section,
   .cards-grid,
   .platform-tools,
+  .audience-grid,
+  .flow-grid,
   .strategy-grid,
   .advantage-grid,
   .intro-grid,
@@ -560,11 +721,16 @@ label {
   .intro-grid article,
   .offer-card,
   .advantage,
+  .audience-card,
+  .flow-card,
+  .conversion-banner,
+  .faq-list,
   .platform-note,
   .tool-card,
   .strategy-card,
   .lead-copy,
-  .lead-form {
+  .lead-form,
+  .site-footer {
     padding: 22px;
   }
 
@@ -575,5 +741,18 @@ label {
   .button,
   .submit-button {
     width: 100%;
+  }
+
+  .site-footer {
+    width: min(100vw - 24px, 100% - 24px);
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 88px;
+  }
+
+  .floating-cta {
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
   }
 }

@@ -18,6 +18,21 @@ revealElements.forEach((element) => revealObserver.observe(element));
 
 const leadForm = document.querySelector('#lead-form');
 const formNote = document.querySelector('#form-note');
+const interestField = document.querySelector('select[name="interest"]');
+
+document.querySelectorAll('[data-interest-link]').forEach((link) => {
+  link.addEventListener('click', () => {
+    const selectedInterest = link.getAttribute('data-interest-link');
+
+    if (interestField && selectedInterest) {
+      interestField.value = selectedInterest;
+    }
+
+    if (formNote) {
+      formNote.textContent = `Выбран интерес: ${selectedInterest}. Добавьте контакты и короткий бриф.`;
+    }
+  });
+});
 
 leadForm?.addEventListener('submit', (event) => {
   event.preventDefault();

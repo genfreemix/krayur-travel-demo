@@ -78,6 +78,12 @@ textarea {
 .hero {
   position: relative;
   padding: 22px 0 64px;
+  background:
+    linear-gradient(180deg, rgba(14, 24, 31, 0.34), rgba(14, 24, 31, 0.18)),
+    linear-gradient(90deg, rgba(14, 24, 31, 0.58), rgba(14, 24, 31, 0.12)),
+    url("./images/kolyma-hero.jpg") center/cover;
+  border-radius: 42px;
+  overflow: hidden;
 }
 
 .hero-atmosphere {
@@ -85,6 +91,7 @@ textarea {
   inset: 0;
   overflow: hidden;
   pointer-events: none;
+  background: linear-gradient(180deg, rgba(8, 16, 22, 0.06), rgba(8, 16, 22, 0.26));
 }
 
 .atmosphere-glow,
@@ -200,7 +207,7 @@ textarea {
   padding: 46px;
   border-radius: var(--radius-xl);
   background:
-    linear-gradient(180deg, rgba(255, 252, 245, 0.84), rgba(255, 248, 238, 0.62)),
+    linear-gradient(180deg, rgba(255, 252, 245, 0.9), rgba(255, 248, 238, 0.72)),
     var(--surface);
 }
 
@@ -338,7 +345,7 @@ textarea {
 .metrics-grid article {
   border-radius: var(--radius-lg);
   padding: 26px;
-  background: linear-gradient(180deg, rgba(36, 70, 61, 0.95), rgba(28, 53, 55, 0.95));
+  background: linear-gradient(180deg, rgba(18, 33, 40, 0.94), rgba(24, 48, 53, 0.95));
   color: #f5ecdf;
 }
 
@@ -400,11 +407,64 @@ textarea {
 .manifesto-card,
 .standard-lead,
 .standard-card,
-.quote-shell {
+.quote-shell,
+.photo-story-card {
   border: 1px solid var(--line);
   background: var(--surface);
   backdrop-filter: blur(14px);
   box-shadow: var(--shadow);
+}
+
+.photo-story-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.photo-story-card {
+  position: relative;
+  min-height: 420px;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, rgba(11, 19, 24, 0.08), rgba(11, 19, 24, 0.78)),
+    var(--story-image) center/cover;
+}
+
+.photo-story-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(7, 14, 18, 0) 20%, rgba(7, 14, 18, 0.86) 100%);
+}
+
+.photo-story-copy {
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  bottom: 24px;
+  z-index: 1;
+  color: #f7f2e8;
+}
+
+.photo-story-copy small {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: rgba(247, 242, 232, 0.78);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 800;
+}
+
+.photo-story-copy h3 {
+  margin: 0 0 12px;
+  font-size: 1.34rem;
+}
+
+.photo-story-copy p {
+  margin: 0;
+  color: rgba(247, 242, 232, 0.86);
+  line-height: 1.65;
 }
 
 .manifesto-card {
@@ -655,7 +715,8 @@ label {
 .tool-card,
 .strategy-card,
 .season-card,
-.standard-card {
+.standard-card,
+.photo-story-card {
   transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
 }
 
@@ -666,7 +727,8 @@ label {
 .tool-card:hover,
 .strategy-card:hover,
 .season-card:hover,
-.standard-card:hover {
+.standard-card:hover,
+.photo-story-card:hover {
   transform: translateY(-4px);
   border-color: rgba(127, 60, 23, 0.22);
   box-shadow: 0 28px 64px rgba(37, 30, 22, 0.16);
@@ -1001,6 +1063,7 @@ label {
   .standards-layout,
   .lead-section,
   .cards-grid,
+  .photo-story-grid,
   .platform-tools,
   .audience-grid,
   .flow-grid,
@@ -1040,6 +1103,7 @@ label {
   .standards-layout,
   .lead-section,
   .cards-grid,
+  .photo-story-grid,
   .platform-tools,
   .audience-grid,
   .flow-grid,
@@ -1072,6 +1136,7 @@ label {
   .advantage,
   .experience-card,
   .season-card,
+  .photo-story-card,
   .manifesto-card,
   .standard-lead,
   .standard-card,
@@ -1101,6 +1166,10 @@ label {
 
   .experience-visual {
     min-height: 420px;
+  }
+
+  .photo-story-card {
+    min-height: 360px;
   }
 
   .experience-orbit {

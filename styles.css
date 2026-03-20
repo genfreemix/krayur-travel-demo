@@ -29,10 +29,7 @@ body {
   min-width: 320px;
   font-family: "Onest", sans-serif;
   color: var(--text);
-  background:
-    radial-gradient(circle at top, rgba(54, 92, 98, 0.18), transparent 32%),
-    linear-gradient(180deg, rgba(4, 10, 14, 0.92), rgba(4, 10, 14, 1)),
-    url("./images/kolyma-hero.jpg") center top / cover fixed;
+  background: url("./images/kolyma-hero.jpg") center top / cover fixed #061015;
 }
 
 body::before {
@@ -40,10 +37,7 @@ body::before {
   position: fixed;
   inset: 0;
   pointer-events: none;
-  background:
-    linear-gradient(180deg, rgba(3, 7, 10, 0.14), rgba(3, 7, 10, 0.74)),
-    radial-gradient(circle at 18% 16%, rgba(115, 156, 162, 0.1), transparent 22%),
-    radial-gradient(circle at 84% 8%, rgba(214, 181, 127, 0.08), transparent 20%);
+  background: rgba(5, 10, 14, 0.60);
 }
 
 a {
@@ -156,9 +150,9 @@ textarea {
 .hero-layout {
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(340px, 1.1fr);
-  gap: 24px;
+  gap: 18px;
   align-items: end;
-  padding-top: 56px;
+  padding-top: 28px;
 }
 
 .hero-main,
@@ -176,16 +170,16 @@ textarea {
 }
 
 .hero-main {
-  padding: 34px;
+  padding: 22px;
   border-radius: var(--radius-xl);
 }
 
 .eyebrow {
-  margin: 0 0 16px;
+  margin: 0 0 10px;
   color: rgba(214, 181, 127, 0.9);
   text-transform: uppercase;
   letter-spacing: 0.16em;
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   font-weight: 700;
 }
 
@@ -206,22 +200,22 @@ textarea {
 
 .hero-main h1 {
   max-width: 10ch;
-  font-size: clamp(3.4rem, 7vw, 6.6rem);
+  font-size: clamp(2rem, 3.2vw, 3.4rem);
 }
 
 .hero-lead {
-  margin: 22px 0 0;
+  margin: 12px 0 0;
   max-width: 56ch;
   color: var(--muted);
-  font-size: 1rem;
-  line-height: 1.65;
+  font-size: 0.9rem;
+  line-height: 1.6;
 }
 
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 24px;
+  gap: 10px;
+  margin-top: 16px;
 }
 
 .button {
@@ -256,12 +250,12 @@ textarea {
 .hero-facts {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
-  margin-top: 28px;
+  gap: 10px;
+  margin-top: 16px;
 }
 
 .hero-facts article {
-  padding: 16px;
+  padding: 12px;
   border-radius: var(--radius-md);
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -289,15 +283,15 @@ textarea {
 
 .gallery-tall {
   grid-row: 1 / span 2;
-  min-height: 640px;
+  min-height: 460px;
 }
 
 .gallery-wide {
-  min-height: 240px;
+  min-height: 200px;
 }
 
 .gallery-note {
-  padding: 24px;
+  padding: 18px;
   border-radius: var(--radius-lg);
   align-self: start;
 }
@@ -372,7 +366,7 @@ textarea {
 .scenic-copy h2,
 .platform-lead h3 {
   max-width: 12ch;
-  font-size: clamp(2rem, 4vw, 3.6rem);
+  font-size: clamp(1.2rem, 1.8vw, 2rem);
 }
 
 .hero-ribbon {
@@ -415,13 +409,13 @@ textarea {
 }
 
 .section {
-  padding-top: 88px;
+  padding-top: 56px;
 }
 
 .section-head {
   display: grid;
-  gap: 16px;
-  margin-bottom: 28px;
+  gap: 12px;
+  margin-bottom: 18px;
 }
 
 .split-head {
@@ -435,7 +429,7 @@ textarea {
 
 .section-head h2 {
   max-width: 14ch;
-  font-size: clamp(2.2rem, 4vw, 4rem);
+  font-size: clamp(1.4rem, 2vw, 2.4rem);
 }
 
 .editorial-grid,
@@ -458,7 +452,7 @@ textarea {
 .platform-card,
 .strategy-step,
 .season-frame {
-  padding: 24px;
+  padding: 18px;
   border-radius: var(--radius-lg);
 }
 
@@ -492,7 +486,7 @@ textarea {
 
 .mosaic-tile {
   position: relative;
-  min-height: 340px;
+  min-height: 260px;
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow);
@@ -500,12 +494,12 @@ textarea {
 
 .tile-large {
   grid-row: 1 / span 2;
-  min-height: 700px;
+  min-height: 520px;
 }
 
 .tile-wide {
   grid-column: 2 / span 2;
-  min-height: 340px;
+  min-height: 240px;
 }
 
 .mosaic-tile::before {
@@ -540,7 +534,7 @@ textarea {
 
 .tile-copy h3 {
   max-width: 13ch;
-  font-size: clamp(1.8rem, 3.2vw, 3.2rem);
+  font-size: clamp(1.1rem, 1.7vw, 1.9rem);
 }
 
 .tile-copy a {
@@ -565,7 +559,7 @@ textarea {
 .rail-card h3,
 .logic-card h3,
 .platform-card h3 {
-  font-size: 2rem;
+  font-size: 1.4rem;
 }
 
 .season-frame {
@@ -597,7 +591,7 @@ textarea {
 
 .platform-lead {
   grid-row: 1 / span 2;
-  min-height: 520px;
+  min-height: 380px;
 }
 
 .strategy-line {
@@ -607,13 +601,13 @@ textarea {
 .lead-layout {
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(320px, 0.8fr);
-  gap: 24px;
-  padding: 28px;
+  gap: 18px;
+  padding: 20px;
   border-radius: var(--radius-xl);
 }
 
 .lead-copy h2 {
-  font-size: clamp(2.4rem, 4vw, 4.2rem);
+  font-size: clamp(1.4rem, 2vw, 2.4rem);
   max-width: 10ch;
 }
 
@@ -629,8 +623,8 @@ textarea {
 
 .lead-form {
   display: grid;
-  gap: 14px;
-  padding: 24px;
+  gap: 10px;
+  padding: 18px;
   border-radius: var(--radius-lg);
   background: var(--panel-strong);
 }
@@ -667,8 +661,8 @@ textarea {
   justify-content: space-between;
   align-items: center;
   gap: 24px;
-  margin-top: 88px;
-  padding: 24px 0 0;
+  margin-top: 56px;
+  padding: 20px 0 0;
   border-top: 1px solid rgba(236, 241, 235, 0.12);
 }
 
@@ -680,6 +674,37 @@ textarea {
 .site-footer p {
   margin: 0;
   color: var(--muted);
+}
+
+/* ─── PHOTO STRIP ─────────────────────────────────────────────── */
+.photo-strip {
+  display: block;
+  width: var(--container);
+  margin: 0 auto;
+  height: 200px;
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.photo-strip::before {
+  content: "";
+  position: absolute;
+  inset: -6%;
+  background: var(--strip-image) center / cover no-repeat;
+  transform: scale(1.04);
+}
+
+.photo-strip::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(5, 10, 14, 0.52),
+    rgba(5, 10, 14, 0.14),
+    rgba(5, 10, 14, 0.52)
+  );
 }
 
 .floating-cta {
@@ -802,15 +827,15 @@ textarea {
   .lead-layout,
   .lead-form,
   .season-frame {
-    padding: 20px;
+    padding: 16px;
   }
 
   .hero-main h1 {
-    font-size: clamp(2.8rem, 14vw, 4.3rem);
+    font-size: clamp(1.8rem, 9vw, 2.8rem);
   }
 
   .section {
-    padding-top: 64px;
+    padding-top: 44px;
   }
 
   .section-head h2,
@@ -822,7 +847,7 @@ textarea {
   .platform-card h3,
   .platform-lead h3 {
     max-width: none;
-    font-size: clamp(1.9rem, 9vw, 3rem);
+    font-size: clamp(1.3rem, 6vw, 2rem);
   }
 
   .hero-facts,

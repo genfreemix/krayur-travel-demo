@@ -70,7 +70,8 @@ textarea {
 .hero,
 .section,
 .trust-strip,
-.lead-section {
+.lead-section,
+.hero-planner {
   width: var(--container);
   margin: 0 auto;
 }
@@ -341,6 +342,168 @@ textarea {
   gap: 20px;
 }
 
+.hero-showcase {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(260px, 0.72fr);
+  gap: 18px;
+}
+
+.showcase-visual,
+.showcase-note,
+.showcase-metrics article,
+.planner-card,
+.planner-cta {
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+
+.showcase-visual {
+  position: relative;
+  min-height: 480px;
+  display: flex;
+  align-items: flex-end;
+  padding: 28px;
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, rgba(8, 15, 20, 0.08), rgba(8, 15, 20, 0.72)),
+    url("./images/okhotsk-sea.jpg") center/cover;
+}
+
+.showcase-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(8, 15, 20, 0.02), rgba(8, 15, 20, 0.8));
+}
+
+.showcase-badge,
+.showcase-copy {
+  position: relative;
+  z-index: 1;
+}
+
+.showcase-badge {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  display: inline-flex;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(255, 250, 240, 0.88);
+  color: var(--text);
+  font-size: 0.84rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.showcase-copy {
+  max-width: 30rem;
+  color: #f7f2e8;
+}
+
+.showcase-copy h2 {
+  margin: 0;
+  font-family: "Oranienbaum", serif;
+  font-size: clamp(2.1rem, 4vw, 3.4rem);
+  line-height: 0.98;
+}
+
+.showcase-copy p {
+  margin: 14px 0 0;
+  color: rgba(247, 242, 232, 0.86);
+  line-height: 1.6;
+}
+
+.showcase-aside {
+  display: grid;
+  gap: 18px;
+}
+
+.showcase-note {
+  padding: 24px;
+  background: linear-gradient(180deg, rgba(255, 250, 240, 0.9), rgba(244, 236, 224, 0.82));
+}
+
+.showcase-note p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.showcase-metrics {
+  display: grid;
+  gap: 14px;
+}
+
+.showcase-metrics article {
+  padding: 22px;
+  background: linear-gradient(180deg, rgba(18, 33, 40, 0.94), rgba(24, 48, 53, 0.95));
+  color: #f5ecdf;
+}
+
+.showcase-metrics strong {
+  display: block;
+  font-family: "Oranienbaum", serif;
+  font-size: 2rem;
+}
+
+.showcase-metrics span {
+  display: block;
+  margin-top: 8px;
+  color: rgba(245, 236, 223, 0.82);
+  line-height: 1.45;
+}
+
+.hero-planner {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) auto;
+  gap: 14px;
+  margin-top: -30px;
+  margin-bottom: 22px;
+}
+
+.planner-card,
+.planner-cta {
+  padding: 18px 20px;
+  border: 1px solid var(--line);
+  background: rgba(255, 250, 240, 0.88);
+  backdrop-filter: blur(18px);
+}
+
+.planner-card small {
+  display: block;
+  color: var(--accent-deep);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 800;
+}
+
+.planner-card strong {
+  display: block;
+  margin-top: 8px;
+  font-size: 1.1rem;
+}
+
+.planner-card span {
+  display: block;
+  margin-top: 8px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.planner-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 220px;
+  background: linear-gradient(135deg, var(--forest), var(--sea));
+  color: #fff6ea;
+  font-weight: 800;
+}
+
 .panel-card,
 .metrics-grid article {
   border-radius: var(--radius-lg);
@@ -419,6 +582,10 @@ textarea {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
+}
+
+.photo-story-card-wide {
+  grid-column: span 2;
 }
 
 .photo-story-card {
@@ -1061,6 +1228,7 @@ label {
   .experience-layout,
   .manifesto-layout,
   .standards-layout,
+  .hero-showcase,
   .lead-section,
   .cards-grid,
   .photo-story-grid,
@@ -1078,6 +1246,10 @@ label {
 
   .metrics-grid {
     grid-template-columns: 1fr;
+  }
+
+  .hero-planner {
+    grid-template-columns: 1fr 1fr;
   }
 
   .conversion-banner {
@@ -1101,6 +1273,7 @@ label {
   .experience-layout,
   .manifesto-layout,
   .standards-layout,
+  .hero-showcase,
   .lead-section,
   .cards-grid,
   .photo-story-grid,
@@ -1112,7 +1285,8 @@ label {
   .strategy-grid,
   .advantage-grid,
   .intro-grid,
-  .trust-strip {
+  .trust-strip,
+  .hero-planner {
     grid-template-columns: 1fr;
   }
 
@@ -1129,6 +1303,11 @@ label {
 
   .hero-copy,
   .hero-panel,
+  .showcase-visual,
+  .showcase-note,
+  .showcase-metrics article,
+  .planner-card,
+  .planner-cta,
   .panel-card,
   .metrics-grid article,
   .intro-grid article,
@@ -1156,6 +1335,14 @@ label {
 
   .hero-copy h1 {
     font-size: clamp(2.7rem, 16vw, 4.4rem);
+  }
+
+  .showcase-visual {
+    min-height: 360px;
+  }
+
+  .photo-story-card-wide {
+    grid-column: auto;
   }
 
   .manifesto-layout h2,

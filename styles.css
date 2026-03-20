@@ -29,7 +29,7 @@ body {
   min-width: 320px;
   font-family: "Onest", sans-serif;
   color: var(--text);
-  background: url("./images/kolyma-hero.jpg") center 40% / cover fixed #061015;
+  background: url("./images/kolyma-hero.jpg") center 65% / cover fixed #061015;
 }
 
 body::before {
@@ -37,7 +37,7 @@ body::before {
   position: fixed;
   inset: 0;
   pointer-events: none;
-  background: rgba(5, 10, 14, 0.42);
+  background: rgba(5, 10, 14, 0.28);
 }
 
 a {

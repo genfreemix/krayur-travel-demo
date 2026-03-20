@@ -3,248 +3,250 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Prototype Site — сайт, который продаёт сложный продукт</title>
-    <meta
-      name="description"
-      content="Прототип системы, которая превращает трафик в заявки через структуру, смысл и сценарий. Адаптируется под любую нишу."
-    />
+    <title>Прототип продающего сайта — для любого бизнеса</title>
+    <meta name="description" content="Прототип структуры, превращающей посетителей в заявки для любого бизнеса." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <div class="page-shell">
 
+      <!-- ═══ NAV ═══ -->
+      <nav class="topbar">
+        <a class="brand" href="#top">
+          <span class="brand-mark">PS</span>
+          <span class="brand-name">Proto<strong>Site</strong></span>
+        </a>
+        <div class="topbar-links">
+          <a href="#phases">Этапы</a>
+          <a href="#for-whom">Для кого</a>
+          <a href="#how">Как работает</a>
+        </div>
+        <a class="button primary sm" href="#lead-form">Применить к бизнесу</a>
+      </nav>
+
       <!-- ═══ 1. HERO ═══ -->
-      <header class="hero-stage" id="top">
-        <div class="hero-backdrop" aria-hidden="true"></div>
-
-        <nav class="topbar">
-          <a class="brand" href="#top">
-            <span class="brand-mark">PS</span>
-            <span class="brand-copy">
-              <strong>Prototype Site</strong>
-              <small>интерактивная демонстрация системы</small>
-            </span>
-          </a>
-          <div class="topbar-actions">
-            <a href="#how">Как работает</a>
-            <a href="#niches">Ниши</a>
-            <a class="button ghost sm" href="#lead-form">Разобрать под бизнес</a>
-          </div>
-        </nav>
-
-        <div class="hero-content reveal">
-          <p class="eyebrow">Прототип продающей системы</p>
-          <h1>Сайт, который продаёт<br>сложный продукт<br>без менеджера</h1>
-          <p class="hero-sub">Прототип системы, которая превращает трафик в заявки<br>через структуру, смысл и сценарий.</p>
+      <header class="hero-section" id="top">
+        <div class="hero-inner reveal">
+          <div class="hero-badge">Прототип продающей системы</div>
+          <h1>Сайт, который<br>продаёт за вас</h1>
+          <p class="hero-lead">Прототип структуры, превращающей посетителей<br>в заявки — для любого бизнеса.</p>
           <div class="hero-actions">
-            <a class="button primary" href="#logic">Посмотреть как это работает</a>
-            <a class="button secondary" href="#lead-form">Разобрать под свой бизнес</a>
+            <a class="button primary lg" href="#phases">Посмотреть как это работает</a>
+            <a class="button secondary lg" href="#lead-form">Применить к своему бизнесу</a>
+          </div>
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <strong>+40–80%</strong>
+              <span>рост конверсии</span>
+            </div>
+            <div class="hero-stat-sep"></div>
+            <div class="hero-stat">
+              <strong>−60%</strong>
+              <span>нагрузка на менеджеров</span>
+            </div>
+            <div class="hero-stat-sep"></div>
+            <div class="hero-stat">
+              <strong>Любая ниша</strong>
+              <span>адаптируется под задачу</span>
+            </div>
           </div>
         </div>
-
-        <div class="hero-proof reveal reveal-delay-1">
-          <div class="proof-item">
-            <strong>Каждый блок</strong>
-            <span>решает задачу бизнеса</span>
-          </div>
-          <div class="proof-sep" aria-hidden="true"></div>
-          <div class="proof-item">
-            <strong>Структура → сценарий</strong>
-            <span>управляет вниманием клиента</span>
-          </div>
-          <div class="proof-sep" aria-hidden="true"></div>
-          <div class="proof-item">
-            <strong>Без воды</strong>
-            <span>только то, что ведёт к заявке</span>
-          </div>
-          <div class="proof-sep" aria-hidden="true"></div>
-          <div class="proof-item">
-            <strong>Любая ниша</strong>
-            <span>медицина, туризм, B2B, услуги</span>
+        <div class="hero-visual reveal reveal-delay-1" aria-hidden="true">
+          <div class="hero-mockup">
+            <div class="mockup-bar">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="mockup-content">
+              <div class="mockup-hero-block">
+                <div class="mockup-line w60 bold"></div>
+                <div class="mockup-line w40"></div>
+                <div class="mockup-line w50"></div>
+                <div class="mockup-btns">
+                  <div class="mockup-btn accent"></div>
+                  <div class="mockup-btn outline"></div>
+                </div>
+              </div>
+              <div class="mockup-cards">
+                <div class="mockup-card"></div>
+                <div class="mockup-card"></div>
+                <div class="mockup-card accent-card"></div>
+                <div class="mockup-card"></div>
+              </div>
+              <div class="mockup-form">
+                <div class="mockup-line w70"></div>
+                <div class="mockup-input"></div>
+                <div class="mockup-input"></div>
+                <div class="mockup-btn accent full"></div>
+              </div>
+            </div>
           </div>
         </div>
       </header>
 
       <main>
 
-        <!-- ═══ 2. ЛОГИКА СИСТЕМЫ (4 этапа) ═══ -->
-        <section class="section logic-section" id="logic">
+        <!-- ═══ 2. ФАЗЫ (2×2 по референсу) ═══ -->
+        <section class="section phases-section" id="phases">
           <div class="section-head reveal">
-            <p class="eyebrow">Логика системы</p>
-            <h2>Каждый экран отвечает на вопрос:<br>«какую задачу бизнеса он решает?»</h2>
+            <p class="eyebrow">Из чего состоит система</p>
+            <h2>4 этапа, которые превращают<br>сайт в инструмент продаж</h2>
+            <p class="section-sub">Каждый этап решает конкретную бизнес-задачу — усиление, аналитика, автоматизация, удержание.</p>
           </div>
           <div class="phases-grid">
             <article class="phase-card reveal">
-              <div class="phase-num">01</div>
-              <h3>Формирование доверия</h3>
-              <p>Сайт усиливает восприятие бренда через структуру, дизайн и правильную подачу информации. Закрывает базовые сомнения клиента ещё до разговора с менеджером.</p>
-              <div class="phase-tag">Задача: снять барьер входа</div>
+              <div class="phase-tag">Этап 1</div>
+              <h3>Усиление доверия</h3>
+              <p>Сайт формирует первое впечатление, закрывает сомнения и повышает доверие к бизнесу через структуру, дизайн и контент.</p>
             </article>
             <article class="phase-card reveal reveal-delay-1">
-              <div class="phase-num">02</div>
-              <h3>Управление вниманием</h3>
-              <p>Контент выстроен так, чтобы вести пользователя по сценарию: от интереса — к пониманию — к желанию. Нет случайных блоков и декоративных элементов.</p>
-              <div class="phase-tag">Задача: удержать и продвинуть</div>
+              <div class="phase-tag">Этап 2</div>
+              <h3>Контроль и аналитика</h3>
+              <p>Подключение аналитики, CRM и отслеживание заявок. Понимание, откуда приходят клиенты и сколько стоит каждый лид.</p>
             </article>
             <article class="phase-card reveal reveal-delay-2">
-              <div class="phase-num">03</div>
-              <h3>Объяснение сложного продукта</h3>
-              <p>Сайт упрощает восприятие сложных услуг через этапы, визуал и смысловые блоки. Клиент понимает ценность без «воды» и перегрузки терминами.</p>
-              <div class="phase-tag">Задача: сформировать понимание</div>
+              <div class="phase-tag">Этап 3</div>
+              <h3>Автоматизация общения</h3>
+              <p>ИИ-чат или сценарии общения помогают отвечать на вопросы, обрабатывать заявки и разгружать менеджеров.</p>
             </article>
             <article class="phase-card reveal">
-              <div class="phase-num">04</div>
-              <h3>Конверсия в заявку</h3>
-              <p>Каждый экран подводит к действию. Сайт не просто показывает — он продаёт. Форма, CTA и финальный аргумент работают в связке как единый сценарий.</p>
-              <div class="phase-tag">Задача: получить заявку</div>
+              <div class="phase-tag">Этап 4</div>
+              <h3>Удержание и повторные продажи</h3>
+              <p>Боты, рассылки и личные кабинеты помогают возвращать клиентов и увеличивать LTV без дополнительных затрат на рекламу.</p>
             </article>
           </div>
         </section>
 
-        <!-- ВИЗУАЛЬНЫЙ РАЗДЕЛИТЕЛЬ: пример продукта -->
-        <div class="example-strip reveal">
-          <div class="example-strip-label">
-            <span class="eyebrow">Пример применения</span>
-            <p>Эта система использована для упаковки экспедиционного туроператора из Магадана</p>
-          </div>
-          <div class="example-images">
-            <div class="ex-img" style="--img: url('./images/kolyma-hero.jpg');"></div>
-            <div class="ex-img" style="--img: url('./images/okhotsk-sea.jpg');"></div>
-            <div class="ex-img" style="--img: url('./images/kolyma-kayak.jpg');"></div>
-            <div class="ex-img" style="--img: url('./images/kolyma-ice.jpg');"></div>
-          </div>
-        </div>
-
-        <!-- ═══ 3. ЧТО ЭТО ДАЁТ БИЗНЕСУ ═══ -->
-        <section class="section benefits-section">
+        <!-- ═══ 3. ДЛЯ КОГО ═══ -->
+        <section class="section for-whom-section" id="for-whom">
           <div class="section-head reveal">
-            <p class="eyebrow">Что это даёт бизнесу</p>
-            <h2>Результат — не красивый сайт.<br>Результат — рост заявок.</h2>
+            <p class="eyebrow">Для кого это</p>
+            <h2>Подходит для любого бизнеса,<br>где важны заявки и доверие</h2>
           </div>
-          <div class="benefits-grid">
-            <article class="benefit-card reveal">
-              <div class="benefit-icon">↑</div>
-              <h3>Увеличение доверия</h3>
-              <p>Правильная структура снимает барьеры и формирует образ надёжного бизнеса. Клиент принимает решение ещё до звонка.</p>
+          <div class="whom-grid">
+            <article class="whom-card reveal">
+              <div class="whom-icon">🛒</div>
+              <h3>Онлайн-магазины</h3>
+              <p>Увеличение конверсии, брошенные корзины, повторные продажи и автоматические рассылки.</p>
             </article>
-            <article class="benefit-card reveal reveal-delay-1">
-              <div class="benefit-icon">×</div>
+            <article class="whom-card reveal reveal-delay-1">
+              <div class="whom-icon">💇</div>
+              <h3>Салоны красоты</h3>
+              <p>Онлайн-запись, напоминания, удержание клиентов и сбор отзывов в автоматическом режиме.</p>
+            </article>
+            <article class="whom-card reveal reveal-delay-2">
+              <div class="whom-icon">🏥</div>
+              <h3>Медицинские центры</h3>
+              <p>Формирование доверия, запись на приём, маршрутизация пациентов, снижение нагрузки на администраторов.</p>
+            </article>
+            <article class="whom-card reveal">
+              <div class="whom-icon">🧑‍💼</div>
+              <h3>Эксперты и услуги</h3>
+              <p>Упаковка экспертизы, прогрев аудитории, сбор заявок и автопрезентация без менеджера.</p>
+            </article>
+            <article class="whom-card reveal reveal-delay-1">
+              <div class="whom-icon">🏗</div>
+              <h3>Строительство и локальный бизнес</h3>
+              <p>Объяснение сложного продукта, портфолио, расчёт стоимости и сбор горячих заявок.</p>
+            </article>
+          </div>
+        </section>
+
+        <!-- ═══ 4. ЧТО ДАЁТ ═══ -->
+        <section class="section gives-section">
+          <div class="section-head reveal">
+            <p class="eyebrow">Что это даёт</p>
+            <h2>Измеримый результат — не красивый сайт, а рост бизнеса</h2>
+          </div>
+          <div class="gives-grid">
+            <article class="gives-card gives-accent reveal">
+              <div class="gives-val">+40–80%</div>
               <h3>Рост конверсии</h3>
-              <p>Встроенный в структуру сценарий ведёт клиента к заявке — без лишних вопросов, без утечки на старте воронки.</p>
+              <p>Встроенный в структуру сценарий ведёт пользователя к заявке без лишних кликов и потерь.</p>
             </article>
-            <article class="benefit-card reveal reveal-delay-2">
-              <div class="benefit-icon">≡</div>
-              <h3>Объяснение сложного продукта</h3>
-              <p>Клиент понимает ценность ещё до разговора с менеджером. Это сокращает цикл сделки и снижает нагрузку на команду.</p>
+            <article class="gives-card reveal reveal-delay-1">
+              <div class="gives-val">−60%</div>
+              <h3>Нагрузка на менеджеров</h3>
+              <p>Сайт берёт на себя первичную обработку: отвечает на вопросы, квалифицирует клиента, собирает бриф.</p>
             </article>
-            <article class="benefit-card reveal">
-              <div class="benefit-icon">→</div>
-              <h3>Снижение нагрузки на менеджеров</h3>
-              <p>Сайт берёт на себя первичную квалификацию. Вы получаете только тех, кто уже понял продукт и готов к диалогу.</p>
+            <article class="gives-card reveal reveal-delay-2">
+              <div class="gives-val">×3</div>
+              <h3>Прозрачная аналитика</h3>
+              <p>Видно всё: откуда пришёл клиент, на каком шаге ушёл, сколько стоит лид и какой канал работает.</p>
+            </article>
+            <article class="gives-card reveal">
+              <div class="gives-val">100%</div>
+              <h3>Понятная структура</h3>
+              <p>Клиент понимает продукт, доверяет бизнесу и принимает решение ещё до разговора с менеджером.</p>
             </article>
           </div>
         </section>
 
-        <!-- ═══ 4. КАК ЭТО РАБОТАЕТ ═══ -->
+        <!-- ═══ 5. КАК РАБОТАЕТ ═══ -->
         <section class="section how-section" id="how">
-          <div class="how-layout">
-            <div class="how-text reveal">
-              <p class="eyebrow">Как это работает</p>
-              <h2>Структура.<br>Сценарий.<br>Результат.</h2>
-              <p>Каждый блок на странице — это не «дизайн» и не «контент ради контента». Это элемент воронки с конкретной функцией: привлечь, удержать, объяснить, убедить, продать.</p>
-            </div>
-            <div class="how-steps">
-              <article class="how-step reveal">
-                <span class="step-label">Структура</span>
-                <p>Сначала формируется логическая карта: какой вопрос клиента закрывает каждый блок. Ни один экран не существует «просто так».</p>
-              </article>
-              <article class="how-step reveal reveal-delay-1">
-                <span class="step-label">Сценарий</span>
-                <p>Пользователь проходит путь: узнал → понял → захотел → оставил заявку. Структура страницы управляет этим путём без давления и агрессии.</p>
-              </article>
-              <article class="how-step reveal reveal-delay-2">
-                <span class="step-label">Логика блоков</span>
-                <p>Каждый экран отвечает на вопрос «зачем мне это?» и ведёт дальше по воронке. Клиент сам доходит до заявки — без уговоров.</p>
-              </article>
-            </div>
-          </div>
-        </section>
-
-        <!-- ═══ 5. ГИБКОСТЬ / НИШИ ═══ -->
-        <section class="section niches-section" id="niches">
           <div class="section-head reveal">
-            <p class="eyebrow">Гибкость системы</p>
-            <h2>Формат адаптируется<br>под любую нишу.</h2>
+            <p class="eyebrow">Как это работает</p>
+            <h2>Структура → Сценарий → Результат</h2>
           </div>
-          <div class="niches-grid">
-            <article class="niche-card reveal">
-              <div class="niche-bg" style="--img: url('./images/kolyma-hero.jpg');"></div>
-              <div class="niche-body">
-                <h3>Туризм и экспедиции</h3>
-                <p>Сложный продукт с высоким чеком, эмоцией и необходимостью объяснять логистику. Идеальная среда для этой системы.</p>
+          <div class="how-steps">
+            <article class="how-step reveal">
+              <div class="step-num">01</div>
+              <div class="step-body">
+                <h3>Структура</h3>
+                <p>Каждый блок страницы — это элемент воронки. Сначала формируется логическая карта: какой вопрос клиента закрывает каждый экран. Ни один блок не существует «просто так».</p>
               </div>
             </article>
-            <article class="niche-card reveal reveal-delay-1">
-              <div class="niche-bg" style="--img: url('./images/okhotsk-sea.jpg');"></div>
-              <div class="niche-body">
-                <h3>Медицина и клиники</h3>
-                <p>Где важно сформировать доверие, снять тревогу и объяснить процедуру до первого визита.</p>
+            <div class="how-arrow" aria-hidden="true">→</div>
+            <article class="how-step reveal reveal-delay-1">
+              <div class="step-num">02</div>
+              <div class="step-body">
+                <h3>Сценарий</h3>
+                <p>Пользователь проходит путь: узнал → понял → захотел → оставил заявку. Структура страницы управляет этим путём без давления и без раздражения.</p>
               </div>
             </article>
-            <article class="niche-card reveal reveal-delay-2">
-              <div class="niche-bg" style="--img: url('./images/kolyma-kayak.jpg');"></div>
-              <div class="niche-body">
-                <h3>Строительство и ремонт</h3>
-                <p>Где клиент не понимает процесс, боится ошибиться и хочет видеть структуру работы до договора.</p>
-              </div>
-            </article>
-            <article class="niche-card reveal">
-              <div class="niche-bg" style="--img: url('./images/kolyma-ice.jpg');"></div>
-              <div class="niche-body">
-                <h3>B2B услуги</h3>
-                <p>Где сложный продукт нужно объяснить лицу, принимающему решение, которое смотрит сайт без контакта с менеджером.</p>
+            <div class="how-arrow" aria-hidden="true">→</div>
+            <article class="how-step reveal reveal-delay-2">
+              <div class="step-num">03</div>
+              <div class="step-body">
+                <h3>Результат</h3>
+                <p>Клиент приходит на звонок или встречу уже с пониманием продукта. Менеджер закрывает — не объясняет. Цикл сделки сокращается, конверсия растёт.</p>
               </div>
             </article>
           </div>
         </section>
 
-        <!-- ═══ 6. ФИНАЛЬНЫЙ ДОЖИМ ═══ -->
+        <!-- ═══ 6. ФИНАЛ ═══ -->
         <section class="section closer-section">
           <div class="closer-layout reveal">
-            <div class="closer-left">
+            <div class="closer-text">
               <p class="eyebrow">Главный вывод</p>
-              <p class="closer-big">Это не дизайн.</p>
-              <h2>Это инструмент продаж.</h2>
-              <p>Правильный сайт работает как лучший менеджер: объясняет, формирует доверие, снимает возражения и подводит к заявке. Каждый рубль, вложенный в структуру, возвращается конверсией.</p>
-              <p class="closer-accent">Клиент приходит готовым. Менеджер закрывает, а не объясняет.</p>
+              <div class="closer-big">Это не просто сайт.</div>
+              <h2>Это инструмент<br>роста бизнеса.</h2>
+              <p>Правильно выстроенный сайт работает 24/7: объясняет, формирует доверие, снимает возражения и подводит к заявке. Каждый рубль, вложенный в структуру и сценарий, возвращается конверсией.</p>
             </div>
             <div class="closer-right">
               <div class="closer-checklist">
                 <div class="check-item">
-                  <span class="check-mark">✓</span>
+                  <div class="check-mark">✓</div>
                   <span>Структура, которая ведёт к заявке</span>
                 </div>
                 <div class="check-item">
-                  <span class="check-mark">✓</span>
-                  <span>Сценарий под конкретный продукт</span>
+                  <div class="check-mark">✓</div>
+                  <span>Сценарий под конкретный продукт и аудиторию</span>
                 </div>
                 <div class="check-item">
-                  <span class="check-mark">✓</span>
-                  <span>Смысловые блоки без «воды»</span>
+                  <div class="check-mark">✓</div>
+                  <span>Смысловые блоки без «воды» и декора</span>
                 </div>
                 <div class="check-item">
-                  <span class="check-mark">✓</span>
-                  <span>Визуал, усиливающий восприятие</span>
+                  <div class="check-mark">✓</div>
+                  <span>Аналитика, CRM и автоматизация</span>
                 </div>
                 <div class="check-item">
-                  <span class="check-mark">✓</span>
-                  <span>Адаптация под любую нишу</span>
+                  <div class="check-mark">✓</div>
+                  <span>Адаптируется под любую нишу и задачу</span>
                 </div>
               </div>
               <div class="closer-actions">
@@ -261,22 +263,26 @@
             <div class="lead-copy reveal">
               <p class="eyebrow">Разобрать под ваш бизнес</p>
               <h2>Расскажите о задаче.</h2>
-              <p>Опишите продукт и в чём его сложность для клиента — разберём структуру и покажем, как это может работать в вашей нише.</p>
-              <div class="lead-meta">
-                <div class="lead-meta-item">
-                  <strong>Бесплатный разбор</strong>
-                  <span>структуры под вашу нишу</span>
+              <p>Опишем структуру сайта под вашу нишу, покажем, какие блоки нужны и как они ведут к заявке. Бесплатный разбор — конкретный план, а не «поговорим».</p>
+              <div class="lead-promise">
+                <div class="promise-item">
+                  <strong>Бесплатно</strong>
+                  <span>разбор структуры под вашу нишу</span>
                 </div>
-                <div class="lead-meta-item">
-                  <strong>Конкретный результат</strong>
-                  <span>не «поговорим», а план блоков</span>
+                <div class="promise-item">
+                  <strong>Конкретно</strong>
+                  <span>не презентация — план блоков</span>
+                </div>
+                <div class="promise-item">
+                  <strong>Быстро</strong>
+                  <span>ответ в течение рабочего дня</span>
                 </div>
               </div>
             </div>
 
             <form class="lead-form reveal reveal-delay-1" id="lead-form">
               <label>
-                Имя или компания
+                Имя или название компании
                 <input name="name" type="text" placeholder="Как к вам обращаться" required />
               </label>
               <label>
@@ -284,21 +290,22 @@
                 <input name="contact" type="text" placeholder="Telegram, e-mail или телефон" required />
               </label>
               <label>
-                Ниша / продукт
+                Ниша / тип бизнеса
                 <select name="interest" required>
                   <option value="">Выберите нишу</option>
+                  <option>Онлайн-магазин</option>
+                  <option>Салон красоты / spa</option>
+                  <option>Медицинский центр / клиника</option>
+                  <option>Эксперт / услуги / консалтинг</option>
+                  <option>Строительство / ремонт</option>
                   <option>Туризм и экспедиции</option>
-                  <option>Медицина и клиники</option>
-                  <option>Строительство и ремонт</option>
                   <option>B2B услуги</option>
-                  <option>Юридические / финансовые услуги</option>
-                  <option>Образование и онлайн-курсы</option>
-                  <option>Другая ниша</option>
+                  <option>Другое</option>
                 </select>
               </label>
               <label>
-                В чём сложность продукта для клиента
-                <textarea name="brief" rows="4" placeholder="Что обычно не понимают с первого раза, почему долго принимают решение, чего боятся"></textarea>
+                В чём сложность вашего продукта для клиента
+                <textarea name="brief" rows="4" placeholder="Что клиенты не понимают с первого раза? Почему долго принимают решение?"></textarea>
               </label>
               <button class="button primary submit-button" type="submit">Отправить запрос</button>
               <p class="form-note" id="form-note">Ответим в течение рабочего дня с конкретным предложением.</p>
@@ -310,15 +317,14 @@
 
       <footer class="site-footer">
         <div>
-          <strong>Prototype Site</strong>
-          <p>Прототип продающей системы — демонстрация подхода к упаковке сложного продукта.</p>
+          <strong>ProtoSite</strong>
+          <p>Прототип продающей системы — демонстрация подхода к упаковке бизнеса.</p>
         </div>
-        <a class="button ghost" href="#top">Наверх</a>
+        <a class="button secondary" href="#top">Наверх</a>
       </footer>
 
-      <a class="floating-cta" href="#lead-form">Разобрать под бизнес</a>
+      <a class="floating-cta" href="#lead-form">Применить к бизнесу</a>
     </div>
-
     <script type="module" src="./main.js"></script>
   </body>
 </html>

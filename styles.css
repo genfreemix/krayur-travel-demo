@@ -128,16 +128,10 @@ h3 { font-weight: 700; line-height: 1.22; letter-spacing: -0.01em; }
 
 .brand { display: inline-flex; align-items: center; gap: 10px; }
 
-.brand-mark {
-  display: grid;
-  place-items: center;
-  width: 32px;
+.brand-logo {
   height: 32px;
-  border-radius: 7px;
-  background: var(--accent);
-  color: #fff;
-  font-size: 0.78rem;
-  font-weight: 900;
+  width: auto;
+  display: block;
   flex-shrink: 0;
 }
 

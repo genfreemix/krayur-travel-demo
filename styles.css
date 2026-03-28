@@ -155,13 +155,13 @@ h3 { font-weight: 700; line-height: 1.22; letter-spacing: -0.01em; }
 
 .brand-title {
   display: inline-block;
-  font-size: 0.52rem;
+  font-size: 9px;
   font-weight: 700;
   color: var(--text-mid);
   letter-spacing: 0.20em;
   text-transform: uppercase;
-  background: rgba(0,0,0,0.05);
-  border: 1px solid rgba(0,0,0,0.10);
+  background: rgba(0,0,0,0.03);
+  border: 1px solid rgba(0,0,0,0.08);
   border-radius: 999px;
   padding: 2px 7px;
   margin-bottom: 2px;

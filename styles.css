@@ -642,11 +642,12 @@ h3 { font-weight: 700; line-height: 1.22; letter-spacing: -0.01em; }
 }
 
 .footer-brand-icon {
-  height: 28px;
+  height: 24px;
   width: auto;
   display: block;
   flex-shrink: 0;
-  opacity: 0.72;
+  opacity: 0.92;
+  mix-blend-mode: multiply;
 }
 
 .footer-brand-text {

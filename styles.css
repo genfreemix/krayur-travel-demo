@@ -745,18 +745,18 @@ h3 { font-weight: 700; line-height: 1.22; letter-spacing: -0.01em; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 46px;
-  padding: 0 20px;
+  min-height: 32px;
+  padding: 0 12px;
   border-radius: 999px;
   background: var(--accent);
   color: #fff;
-  font-weight: 800;
-  font-size: 0.82rem;
-  box-shadow: 0 8px 28px rgba(42,117,80,0.30);
+  font-weight: 700;
+  font-size: 0.70rem;
+  box-shadow: 0 4px 16px rgba(42,117,80,0.28);
   transition: transform 0.2s, padding 0.2s;
   z-index: 10;
 }
-.floating-cta.is-compact { padding: 0 12px; transform: scale(0.86); }
+.floating-cta.is-compact { padding: 0 9px; transform: scale(0.88); }
 
 /* ─── REVEAL ──────────────────────────────────────────────── */
 

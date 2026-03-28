@@ -137,7 +137,7 @@ h3 { font-weight: 700; line-height: 1.22; letter-spacing: -0.01em; }
 }
 
 .brand-logo {
-  height: 32px;
+  height: 52px;
   width: auto;
   display: block;
   flex-shrink: 0;
@@ -147,27 +147,25 @@ h3 { font-weight: 700; line-height: 1.22; letter-spacing: -0.01em; }
 .brand-text {
   display: flex;
   flex-direction: column;
-  gap: 0px;
+  gap: 1px;
   line-height: 1;
 }
 
 .brand-title {
-  font-size: 0.62rem;
-  font-weight: 600;
-  color: #8a9e8a;
-  letter-spacing: 0.20em;
+  font-size: 0.92rem;
+  font-weight: 900;
+  color: var(--text);
+  letter-spacing: 0.10em;
   text-transform: uppercase;
-  margin-bottom: 2px;
 }
 
 .brand-name {
-  font-size: 0.96rem;
-  font-weight: 800;
-  color: var(--text);
-  letter-spacing: -0.02em;
-  line-height: 1;
+  font-size: 0.72rem;
+  font-weight: 400;
+  color: var(--muted);
+  letter-spacing: 0.01em;
 }
-.brand-name strong { font-weight: 900; color: var(--text); }
+.brand-name strong { font-weight: 400; color: var(--muted); }
 
 .topbar-links {
   display: flex;

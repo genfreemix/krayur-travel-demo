@@ -740,7 +740,7 @@ h3 { font-weight: 700; line-height: 1.22; letter-spacing: -0.01em; }
 
 .floating-cta {
   position: fixed;
-  right: 20px;
+  right: 8px;
   bottom: 20px;
   display: inline-flex;
   align-items: center;
@@ -822,5 +822,5 @@ h3 { font-weight: 700; line-height: 1.22; letter-spacing: -0.01em; }
 
   .footer-main { flex-direction: column; gap: 28px; }
   .footer-nav { gap: 32px; }
-  .floating-cta { left: auto; right: 12px; bottom: 12px; }
+  .floating-cta { left: auto; right: 4px; bottom: 12px; }
 }

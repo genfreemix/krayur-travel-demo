@@ -636,7 +636,7 @@ h3 { font-weight: 700; line-height: 1.22; letter-spacing: -0.01em; }
 
 .footer-brand-link {
   display: inline-flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 8px;
   text-decoration: none;
 }
@@ -648,6 +648,7 @@ h3 { font-weight: 700; line-height: 1.22; letter-spacing: -0.01em; }
   flex-shrink: 0;
   object-fit: contain;
   mix-blend-mode: multiply;
+  margin-top: -2px;
 }
 
 .footer-brand-text {
@@ -655,6 +656,7 @@ h3 { font-weight: 700; line-height: 1.22; letter-spacing: -0.01em; }
   flex-direction: column;
   gap: 0;
   line-height: 1;
+  padding-top: 6px;
 }
 
 .footer-brand-label {

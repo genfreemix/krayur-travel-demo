@@ -115,7 +115,7 @@ h3 { font-weight: 700; line-height: 1.22; letter-spacing: -0.01em; }
   justify-content: space-between;
   align-items: center;
   gap: 20px;
-  padding: 12px 20px;
+  padding: 6px 20px;
   margin-top: 14px;
   border: 1.5px solid var(--border);
   border-radius: 999px;
@@ -130,23 +130,25 @@ h3 { font-weight: 700; line-height: 1.22; letter-spacing: -0.01em; }
   display: inline-flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 1px;
+  gap: 0px;
+  line-height: 1;
 }
 
 .brand-logo {
-  height: 28px;
+  height: 50px;
   width: auto;
   display: block;
   flex-shrink: 0;
 }
 
 .brand-name {
-  font-size: 0.58rem;
+  font-size: 0.52rem;
   font-weight: 600;
   color: var(--muted);
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  padding-left: 1px;
+  padding-left: 2px;
+  margin-top: -2px;
 }
 .brand-name strong { font-weight: 600; color: var(--muted); }
 

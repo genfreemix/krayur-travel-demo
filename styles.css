@@ -646,7 +646,7 @@ h3 { font-weight: 700; line-height: 1.22; letter-spacing: -0.01em; }
   width: auto;
   display: block;
   flex-shrink: 0;
-  opacity: 0.85;
+  opacity: 0.72;
 }
 
 .footer-brand-text {
@@ -659,23 +659,23 @@ h3 { font-weight: 700; line-height: 1.22; letter-spacing: -0.01em; }
 .footer-brand-label {
   font-size: 8.5px;
   font-weight: 700;
-  color: var(--muted);
+  color: var(--text-mid);
   letter-spacing: 0.20em;
   text-transform: uppercase;
 }
 
 .footer-brand-dir {
-  font-size: 0.96rem;
+  font-size: 1.10rem;
   font-weight: 700;
   color: var(--text);
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
 }
 
 .footer-brand-desc {
   font-size: 0.78rem;
   color: var(--muted);
   line-height: 1.62;
-  max-width: 36ch;
+  max-width: 30ch;
 }
 
 .footer-nav {
@@ -722,13 +722,13 @@ h3 { font-weight: 700; line-height: 1.22; letter-spacing: -0.01em; }
 
 .footer-bottom-note {
   font-size: 0.76rem;
-  color: var(--muted);
+  color: var(--text-mid);
 }
 
 .footer-up {
   font-size: 0.78rem;
   font-weight: 600;
-  color: var(--muted);
+  color: var(--text-mid);
   transition: color 0.15s;
 }
 .footer-up:hover { color: var(--text); }

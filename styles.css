@@ -89,6 +89,7 @@ h3 { font-weight: 700; line-height: 1.22; letter-spacing: -0.01em; }
 }
 .button:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
 .button.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+.topbar .button.primary:hover { transform: scale(1.01) translateY(-1px); box-shadow: 0 4px 16px rgba(42,117,80,0.28); }
 .button.secondary { border-color: var(--border-mid); background: var(--surface); color: var(--text-mid); }
 .button.sm { min-height: 36px; padding: 0 14px; font-size: 0.78rem; }
 .button.lg { min-height: 50px; padding: 0 26px; font-size: 0.90rem; }
@@ -115,12 +116,14 @@ h3 { font-weight: 700; line-height: 1.22; letter-spacing: -0.01em; }
   justify-content: space-between;
   align-items: center;
   gap: 20px;
-  padding: 6px 20px;
+  padding: 8px 18px 8px 14px;
   margin-top: 14px;
   border: 1.5px solid var(--border);
   border-radius: 999px;
-  background: var(--surface);
-  box-shadow: var(--shadow-sm);
+  background: rgba(255,255,255,0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07), 0 1px 3px rgba(0,0,0,0.05);
   position: sticky;
   top: 10px;
   z-index: 100;
@@ -130,32 +133,39 @@ h3 { font-weight: 700; line-height: 1.22; letter-spacing: -0.01em; }
   display: inline-flex;
   flex-direction: row;
   align-items: center;
-  gap: 9px;
+  gap: 8px;
 }
 
 .brand-logo {
-  height: 48px;
+  height: 24px;
   width: auto;
   display: block;
   flex-shrink: 0;
+  opacity: 0.88;
 }
 
 .brand-text {
   display: flex;
   flex-direction: column;
-  gap: 0px;
-  line-height: 1.2;
+  gap: 1px;
+  line-height: 1;
 }
 
 .brand-title {
-  font-size: 0.82rem;
-  font-weight: 900;
-  color: var(--text);
-  letter-spacing: 0.02em;
+  font-size: 0.58rem;
+  font-weight: 500;
+  color: var(--muted);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
 }
 
-.brand-name { font-size: 0.65rem; color: var(--muted); }
-.brand-name strong { font-weight: 700; color: var(--text-mid); }
+.brand-name {
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+.brand-name strong { font-weight: 900; color: var(--text); }
 
 .topbar-links {
   display: flex;
@@ -165,7 +175,7 @@ h3 { font-weight: 700; line-height: 1.22; letter-spacing: -0.01em; }
   font-size: 0.82rem;
   font-weight: 500;
 }
-.topbar-links a:hover { color: var(--text); }
+.topbar-links a:hover { color: var(--text); transition: color 0.15s; }
 
 /* ─── HERO ────────────────────────────────────────────────── */
 

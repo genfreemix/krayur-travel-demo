@@ -463,10 +463,192 @@ h3 { font-weight: 700; line-height: 1.22; letter-spacing: -0.01em; }
   transition: box-shadow 0.2s, transform 0.2s;
 }
 .niche-card:hover { box-shadow: var(--shadow); transform: translateY(-2px); }
+.niche-card[data-niche] { cursor: pointer; }
+.niche-card[data-niche]:hover .niche-card-hint { opacity: 1; }
 
 .niche-icon { font-size: 1.6rem; line-height: 1; margin-bottom: 9px; }
 .niche-card h3 { font-size: 0.82rem; font-weight: 700; margin-bottom: 6px; }
 .niche-card p { color: var(--muted); font-size: 0.75rem; line-height: 1.52; }
+.niche-card-hint {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--accent);
+  opacity: 0;
+  transition: opacity 0.18s;
+}
+
+/* ─── NICHE MODAL ─────────────────────────────────────────── */
+
+.niche-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(10, 20, 10, 0.55);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  animation: modalFadeIn 0.2s ease;
+}
+.niche-modal-backdrop[hidden] { display: none; }
+
+@keyframes modalFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.niche-modal-box {
+  background: var(--surface);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  padding: 32px 28px 28px;
+  width: 100%;
+  max-width: 620px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  animation: modalSlideUp 0.22s ease;
+}
+
+@keyframes modalSlideUp {
+  from { transform: translateY(16px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.niche-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  background: var(--bg-soft);
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 1rem;
+  cursor: pointer;
+  color: var(--text-mid);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+}
+.niche-modal-close:hover { background: var(--border-mid); }
+
+.niche-modal-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.niche-modal-icon { font-size: 2rem; line-height: 1; }
+.niche-modal-title { font-size: 1.25rem; font-weight: 800; letter-spacing: -0.02em; }
+
+/* Инфографика — картинка */
+.niche-modal-img {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  margin-bottom: 20px;
+  display: block;
+}
+
+/* Инфографика — CSS до/после */
+.niche-infographic {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: 20px;
+  border: 1.5px solid var(--border);
+}
+.niche-infographic-col {
+  padding: 16px 14px;
+}
+.niche-infographic-col.bad {
+  background: #fff5f5;
+  border-right: 1.5px solid var(--border);
+}
+.niche-infographic-col.good {
+  background: #f0faf4;
+}
+.niche-infographic-col-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 10px;
+}
+.niche-infographic-col.bad .niche-infographic-col-title { color: #c0392b; }
+.niche-infographic-col.good .niche-infographic-col-title { color: var(--accent); }
+.niche-infographic-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.niche-infographic-list li {
+  font-size: 0.78rem;
+  color: var(--text-mid);
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  line-height: 1.4;
+}
+.niche-infographic-list li::before {
+  flex-shrink: 0;
+  margin-top: 1px;
+  font-size: 0.7rem;
+}
+.niche-infographic-col.bad .niche-infographic-list li::before { content: '✕'; color: #c0392b; }
+.niche-infographic-col.good .niche-infographic-list li::before { content: '✓'; color: var(--accent); }
+
+/* Ссылки на прототипы */
+.niche-modal-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.niche-modal-links-title {
+  font-size: 0.70rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+.niche-proto-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: var(--accent-light);
+  border: 1.5px solid rgba(42,117,80,0.18);
+  border-radius: var(--radius-md);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--accent);
+  transition: background 0.15s, transform 0.15s;
+  text-decoration: none;
+}
+.niche-proto-link:hover { background: #d3eee1; transform: translateX(2px); }
+.niche-proto-link::after { content: '→'; }
+.niche-proto-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: var(--bg-soft);
+  border: 1.5px solid var(--border-mid);
+  border-radius: var(--radius-md);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-mid);
+  transition: background 0.15s;
+  text-decoration: none;
+}
+.niche-proto-cta:hover { background: var(--border); }
 
 /* ─── EXTRAS ──────────────────────────────────────────────── */
 
@@ -805,6 +987,11 @@ h3 { font-weight: 700; line-height: 1.22; letter-spacing: -0.01em; }
 
   .niches-grid { grid-template-columns: repeat(2, 1fr); }
   .niches-grid .niche-card:last-child { grid-column: span 2; }
+  .niche-card-hint { opacity: 1; }
+
+  .niche-modal-box { padding: 24px 16px 20px; }
+  .niche-infographic { grid-template-columns: 1fr; }
+  .niche-infographic-col.bad { border-right: none; border-bottom: 1.5px solid var(--border); }
 
   .optimize-grid { grid-template-columns: 1fr; }
 

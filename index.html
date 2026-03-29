@@ -251,35 +251,41 @@
             <h2>Система адаптируется<br>под вашу нишу</h2>
           </div>
           <div class="niches-grid">
-            <article class="niche-card reveal">
+            <article class="niche-card reveal" data-niche="shop" role="button" tabindex="0">
               <div class="niche-icon">🛒</div>
               <h3>Онлайн-магазин</h3>
               <p>Рост конверсии и снижение «пустых» заказов</p>
+              <span class="niche-card-hint">Смотреть прототипы →</span>
             </article>
-            <article class="niche-card reveal reveal-delay-1">
+            <article class="niche-card reveal reveal-delay-1" data-niche="salon" role="button" tabindex="0">
               <div class="niche-icon">💇</div>
               <h3>Салон красоты</h3>
               <p>Запись без администратора и рост доверия</p>
+              <span class="niche-card-hint">Смотреть прототип →</span>
             </article>
-            <article class="niche-card reveal reveal-delay-2">
+            <article class="niche-card reveal reveal-delay-2" data-niche="medical" role="button" tabindex="0">
               <div class="niche-icon">🏥</div>
               <h3>Медицинский центр</h3>
               <p>Объяснение сложных услуг и подготовка к записи</p>
+              <span class="niche-card-hint">Смотреть прототипы →</span>
             </article>
-            <article class="niche-card reveal">
+            <article class="niche-card reveal" data-niche="fitness" role="button" tabindex="0">
               <div class="niche-icon">🏋️</div>
               <h3>Фитнес / кроссфит</h3>
               <p>Продажа абонементов через ценность и атмосферу</p>
+              <span class="niche-card-hint">Смотреть прототип →</span>
             </article>
-            <article class="niche-card reveal reveal-delay-1">
+            <article class="niche-card reveal reveal-delay-1" data-niche="travel" role="button" tabindex="0">
               <div class="niche-icon">🌍</div>
               <h3>Туризм и экспедиции</h3>
               <p>Продажа опыта, а не просто поездки</p>
+              <span class="niche-card-hint">Смотреть прототип →</span>
             </article>
-            <article class="niche-card reveal reveal-delay-2">
+            <article class="niche-card reveal reveal-delay-2" data-niche="expert" role="button" tabindex="0">
               <div class="niche-icon">🧑‍💼</div>
               <h3>Услуги и эксперты</h3>
               <p>Упрощение сложных предложений и рост чека</p>
+              <span class="niche-card-hint">Обсудить →</span>
             </article>
           </div>
         </section>
@@ -459,6 +465,20 @@
 
       <a class="floating-cta" href="#lead-form">Разобрать под мой бизнес</a>
     </div>
+
+    <!-- ═══ NICHE MODAL ═══ -->
+    <div class="niche-modal-backdrop" id="niche-modal" role="dialog" aria-modal="true" aria-labelledby="niche-modal-title" hidden>
+      <div class="niche-modal-box">
+        <button class="niche-modal-close" id="niche-modal-close" aria-label="Закрыть">✕</button>
+        <div class="niche-modal-header">
+          <span class="niche-modal-icon" id="niche-modal-icon"></span>
+          <h3 class="niche-modal-title" id="niche-modal-title"></h3>
+        </div>
+        <div class="niche-modal-infographic" id="niche-modal-infographic"></div>
+        <div class="niche-modal-links" id="niche-modal-links"></div>
+      </div>
+    </div>
+
     <script type="module" src="./main.js"></script>
   </body>
 </html>
